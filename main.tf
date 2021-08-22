@@ -1,4 +1,4 @@
-# --- ec2 instance resources --- #
+# EC2
 resource "aws_instance" "tfimportec2" {
 ami = var.ami[var.region]
 #ami IS REGION SPECIFIC - please check which region you are in if you receive an error
@@ -12,13 +12,13 @@ tags = {
  }
 }
 
-# --- EIPs ---
+# EIPs 
 resource "aws_eip_association" "eip_assoc1" {
 instance_id   = aws_instance.tfimportec2.id
 allocation_id = aws_eip.tfeip1.id
 }
 
-# --- Rds instance resource--- #
+# RDS 
 resource "aws_db_instance" "tfdatabase" {
 engine         = "mysql"
 engine_version = "8.0.20"
