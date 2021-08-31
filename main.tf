@@ -1,7 +1,7 @@
 # EC2
 resource "aws_instance" "tfimportec2" {
 ami = var.ami[var.region]
-#ami IS REGION SPECIFIC - confirm right region to avoid error
+#AMI is region-specific - confirm right region to avoid error
 instance_type = var.instance_override == false ? var.instance_type : var.no_instance_type_change
 key_name = "tf-demo"
 }
