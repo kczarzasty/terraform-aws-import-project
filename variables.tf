@@ -8,3 +8,10 @@ variable "instance_type" {
 type = string
 default = "t3.micro"
 }
+variable "ami" {
+type = string
+}
+variable "no_instance_type_change" {
+type = bool
+default = true
+}
