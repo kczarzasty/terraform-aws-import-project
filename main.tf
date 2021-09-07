@@ -1,3 +1,4 @@
+# Note as of 9/7/21 main.tf isn't functional because variables.tf isn't yet complete
 # EC2
 resource "aws_instance" "tfimportec2" {
 ami = var.ami[var.region]
